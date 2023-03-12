@@ -1,16 +1,19 @@
+import { GlobalStyle } from './GlobalStyle';
+
+// import { StyledContainer } from './App.styled';
+
+import SharedLayout from './SharedLayout/SharedLayout';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    // <StyledContainer>
+    <>
+      <GlobalStyle />
+      <SharedLayout />
+      <ToastContainer position="top-right" autoClose={5000} theme="colored" />
+    </>
+    // </StyledContainer>
   );
 };
