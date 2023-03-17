@@ -25,11 +25,10 @@ export const Wrapper = styled.div`
     top: 0;
     &:hover span,
     :focus span {
-      color: #f59256;
+      color: ${p => p.theme.colors.home.secTitle};
     }
   }
   @media (min-width: 1280px) {
-   
   }
 `;
 
@@ -38,7 +37,7 @@ export const StyledAddNoticeBtn = styled.button`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: #f59256;
+  background-color: ${p => p.theme.colors.home.secTitle};
   cursor: pointer;
   display: flex;
   align-items: center;

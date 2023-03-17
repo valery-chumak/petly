@@ -10,7 +10,6 @@ export const Item = styled.li`
   background: ${props => props.theme.colors.white};
   border-radius: 0px 0px 20px 20px;
   box-shadow: 7px 4px 14px rgba(49, 21, 4, 0.07);
-  
 
   @media screen and (min-width: 768px) {
     width: 336px;
@@ -22,11 +21,10 @@ export const Item = styled.li`
   }
 `;
 
-
 export const LearnMoreBtn = styled.button`
-  color: rgba(245, 146, 86, 1);
+  color: ${p => p.theme.colors.home.secTitle};
   background: ${props => props.theme.colors.white};
-  border: 2px solid rgba(245, 146, 86, 1);
+  border: 2px solid ${p => p.theme.colors.home.secTitle};
   border-radius: 40px;
   font-weight: 500;
   font-size: 16px;
@@ -60,7 +58,7 @@ export const LearnMoreBtn = styled.button`
   }
 
   &:hover {
-    background: rgba(255, 97, 1, 1);
+    background: ${p => p.theme.colors.home.secTitle};
     color: ${props => props.theme.colors.white};
   }
 `;
@@ -111,7 +109,6 @@ export const InfoWrapper = styled.div`
   padding: 20px;
   padding-bottom: 0;
 `;
-
 
 export const Title = styled.h2`
   font-weight: 700;

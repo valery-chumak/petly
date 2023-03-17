@@ -16,3 +16,7 @@ export const StyledImg = styled.img`
   display: block;
   width: 100%;
 `;
+export const Link = styled.a`
+  display: block;
+  width: 100%;
+`;

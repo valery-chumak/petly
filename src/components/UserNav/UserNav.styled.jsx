@@ -25,7 +25,7 @@ export const StyledButton = styled(Link)`
   line-height: ${p => p.theme.lineHeights.c};
   color: ${p => p.theme.colors.home.secButtonText};
   padding: 8px 28px;
-  border: 1px solid rgba(245, 146, 86, 1);
+  border: 1px solid rgba(255, 154, 154, 1);
   border-radius: ${p => p.theme.radii.lg};
   background-color: ${p => p.theme.colors.home.secButton};
   text-decoration: none;
@@ -33,7 +33,7 @@ export const StyledButton = styled(Link)`
 
   &:hover,
   &:focus {
-    background-color: #f7853f;
+    background-color: rgba(255, 186, 186, 1);
   }
 
   @media (min-width: 768px) {

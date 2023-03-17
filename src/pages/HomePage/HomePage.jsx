@@ -7,9 +7,9 @@ import {
   MainContainer,
 } from './HomePage.styled';
 
-import portrait from '../../img/portrait.png';
-import portrait2x from '../../img/portrait@2x.png';
-import portrait3x from '../../img/portrait@3x.png';
+import portrait from '../../img/portraitt.png';
+import portrait2x from '../../img/portraitt@2x.png';
+import portrait3x from '../../img/portraitt@3x.png';
 export default function HomePage() {
   return (
     <HomeSection>
