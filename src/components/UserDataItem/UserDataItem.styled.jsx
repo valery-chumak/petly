@@ -1,8 +1,6 @@
 import { Field } from 'formik';
 import styled from 'styled-components';
-import { ReactComponent as Logo } from '../../img/edit-icon.svg';
-import { ReactComponent as LogoDis } from '../../img/edit-icon-dis.svg';
-import { ReactComponent as LogoDone } from '../../img/done-icon.svg';
+import { RiBallPenLine, RiCheckFill } from 'react-icons/ri';
 export const Wrapper = styled.div`
   position: relative;
   display: flex;
@@ -55,7 +53,7 @@ export const StyledInput = styled(Field)`
   padding: 4px 18px;
   color: #111111;
   background: #fdf7f2;
-  border: 1px solid rgba(245, 146, 86, 0.5);
+  border: 1px solid rgba(255, 154, 154, 1);
   border-radius: 40px;
   font-weight: 400;
   font-size: 12px;
@@ -95,12 +93,14 @@ export const StyledBtn = styled.button`
   &:hover,
   :focus {
     background-color: ${({ isDisabled }) => (isDisabled ? '' : '#ffffff')};
-    border: ${({ isDisabled }) => (isDisabled ? '' : '0.5px solid #f59256')};
+    border: ${({ isDisabled }) =>
+      isDisabled ? '' : '0.5px solid rgba(255, 154, 154, 1)'};
   }
 
   &:hover svg,
   :focus svg {
     transform: ${({ isDisabled }) => (isDisabled ? '' : 'scale(1.1)')};
+    color: ${({ isDisabled }) => (isDisabled ? '' : 'rgba(255, 154, 154, 1)')};
   }
   @media (min-width: 768px) {
     width: 32px;
@@ -108,9 +108,10 @@ export const StyledBtn = styled.button`
   }
 `;
 
-export const BtnImage = styled(Logo)`
+export const BtnImage = styled(RiBallPenLine)`
   width: 12.5px;
   height: 12.5px;
+  color: ${p => p.theme.colors.secondary};
   transition: transform 250ms linear;
   @media (min-width: 768px) {
     width: 18px;
@@ -118,20 +119,20 @@ export const BtnImage = styled(Logo)`
   }
 `;
 
-export const BtnImageDis = styled(LogoDis)`
+export const BtnImageDis = styled(RiBallPenLine)`
   width: 12.5px;
   height: 12.5px;
-
+  color: grey;
   @media (min-width: 768px) {
     width: 18px;
     height: 18px;
   }
 `;
 
-export const BtnImageDone = styled(LogoDone)`
+export const BtnImageDone = styled(RiCheckFill)`
   width: 12.5px;
   height: 12.5px;
-  fill: #f59256;
+  fill: ${p => p.theme.colors.primary};
   @media (min-width: 768px) {
     width: 18px;
     height: 18px;

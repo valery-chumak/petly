@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { ReactComponent as EditIcon } from '../../img/camera-icon.svg';
+import { RiCameraFill, RiPictureInPictureExitLine } from 'react-icons/ri';
 
 export const Wrapper = styled.div`
   padding: 20px 12px 20px 16px;
@@ -97,9 +97,10 @@ export const EditImageBtn = styled.button`
   transition: color 250ms linear, transfrom 250ms linear;
 `;
 
-export const EditImageIcon = styled(EditIcon)`
+export const EditImageIcon = styled(RiCameraFill)`
   width: 20px;
   height: 20px;
+  color: rgba(255, 154, 154, 1);
   margin-right: 4px;
 `;
 
@@ -129,7 +130,7 @@ export const LogoutBtn = styled.button`
   transition: color 250ms linear, transform 250ms linear;
   &:hover,
   :focus {
-    color: #f59256;
+    color: ${p => p.theme.colors.primary};
     transform: scale(1.1);
   }
   @media (min-width: 768px) {
@@ -142,7 +143,7 @@ export const LogoutBtn = styled.button`
   }
 `;
 
-export const LogoutIcon = styled.img`
+export const LogoutIcon = styled(RiPictureInPictureExitLine)`
   width: 20px;
   height: 20px;
   margin-right: 8px;

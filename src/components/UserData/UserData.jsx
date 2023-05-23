@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 import UserDataItem from '../UserDataItem/UserDataItem';
 import noAvatar from '../../img/no-avatar.png';
-import logoutIcon from '../../img/logout-icon.png';
 
 import {
   EditImageBtn,
@@ -127,7 +126,7 @@ export const UserData = ({ user }) => {
           }}
         ></UserDataItem>
         <LogoutBtn onClick={async () => await dispatch(logout())}>
-          <LogoutIcon alt="logout user" src={logoutIcon} /> Log Out
+          <LogoutIcon /> Log Out
         </LogoutBtn>
       </UserItemWrapper>
     </Wrapper>
