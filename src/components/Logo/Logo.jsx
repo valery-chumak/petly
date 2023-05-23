@@ -1,5 +1,5 @@
 import { StyledImg, StyledImgContainer, Link } from './Logo.styled';
-import logo from '../../img/petly.png';
+import logo from '../../img/logo.png';
 
 export default function Logo() {
   return (

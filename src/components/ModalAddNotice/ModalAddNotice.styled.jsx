@@ -68,7 +68,7 @@ export const RadioBtn = styled(Field)`
   &:checked + span,
   :hover + span,
   :focus + span {
-    background-color: #f59256;
+    background-color: ${p => p.theme.colors.primary};
     color: #ffffff;
   }
 `;
@@ -84,7 +84,7 @@ export const RadioBtnText = styled.span`
   background-color: #ffffff;
   color: #111111;
   border-radius: 40px;
-  border: 2px solid #f59256;
+  border: 2px solid rgba(255, 154, 154, 1);
 
   @media (min-width: 768px) {
     font-size: 20px;
@@ -117,7 +117,7 @@ export const StyledInput = styled(Field)`
   padding: 12px 14px;
   color: #111111;
   background: #fdf7f2;
-  border: 1px solid rgba(245, 146, 86, 0.5);
+  border: 1px solid rgba(255, 154, 154, 1);
   border-radius: 40px;
   font-weight: 400;
   font-size: 14px;
@@ -127,8 +127,8 @@ export const StyledInput = styled(Field)`
   :hover,
   :active {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
-    border: 1px solid #f59256;
-    outline: 1px solid #f59256;
+    border: 1px solid rgb(236 110 110);
+    outline: 1px solid rgb(236 110 110);
   }
 
   @media (min-width: 768px) {
@@ -176,13 +176,12 @@ export const MainNoticeBtn = styled.button`
   align-items: center;
   justify-content: center;
   letter-spacing: 0.04em;
-  border: none;
   width: 240px;
   height: 40px;
   color: #111111;
   background-color: #ffffff;
   border-radius: 40px;
-  border: 2px solid #f59256;
+  border: 2px solid rgba(255, 154, 154, 1);
   cursor: pointer;
   transition: all 200ms linear;
   &:first-child {
@@ -199,10 +198,10 @@ line-height: 27px;
       height: 44px;
   }
   ${({ isBgOrange }) =>
-    isBgOrange && 'color:#ffffff; background-color:#f59256 '};
+    isBgOrange && 'color:#ffffff; background-color:rgba(255, 154, 154, 1)'};
   &:hover,
   :focus {
-    background-color: #f59256;
+    background-color: rgba(255, 154, 154, 1);
     color: #ffffff;
     ${({ isBgOrange }) =>
       isBgOrange && 'color:#111111; background-color:#ffffff '}

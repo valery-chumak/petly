@@ -12,7 +12,6 @@ import {
 import { removeNotice } from 'redux/notices/notices-operation';
 import { selectUserData } from 'redux/auth/authSelectors';
 
-
 import ModalNotice from 'components/ModalNotice/ModalNotice';
 
 import {
@@ -30,8 +29,8 @@ import {
   DelIcon,
   FavoriteIcon,
   BtnWrapper,
+  ImageWrapper,
 } from './NoticeCategoryItem.styled';
-
 
 function NoticeCategoryItem(notices) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
@@ -53,8 +52,7 @@ function NoticeCategoryItem(notices) {
     category,
   } = notices;
   const { url } = avatar;
-  
-  
+
   let isFavorite = favorite?.includes(_id) || false;
   let isDisplayed = false;
 
@@ -86,14 +84,13 @@ function NoticeCategoryItem(notices) {
       return category;
     }
   }
-  
-  const onClickFavoriteButton = () => {
-     if (!isLoggedIn) {
-       return toast.error(
-         'You need to authorize before adding notices to favorite.');
-     }
 
-    else if (!isFavorite) {
+  const onClickFavoriteButton = () => {
+    if (!isLoggedIn) {
+      return toast.error(
+        'You need to authorize before adding notices to favorite.'
+      );
+    } else if (!isFavorite) {
       dispatch(addNoticeToFavorite(_id));
     } else {
       dispatch(removeNoticeWithFavorite(_id));
@@ -107,7 +104,10 @@ function NoticeCategoryItem(notices) {
   return (
     <>
       <Item key={_id}>
-        <Image src={url ?? noImage} alt="pet" minwidth={288} height={288} />
+        <ImageWrapper>
+          <Image src={url ?? noImage} alt="pet" minwidth={288} height={288} />
+        </ImageWrapper>
+
         <CategoryTitle>{changeCategory()}</CategoryTitle>
         <AddToFavoriteBtn onClick={onClickFavoriteButton}>
           {isFavorite ? <FavoriteIcon /> : <AddIcon />}

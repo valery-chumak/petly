@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const StyledImgContainer = styled.div`
-  width: 82px;
+  width: 90px;
 
   @media (min-width: 768px) {
-    width: 94px;
+    width: 100px;
   }
 
   @media (min-width: 1300px) {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import UserDataItem from '../UserDataItem/UserDataItem';
-import noAvatar from '../../img/no-image.jpeg';
+import noAvatar from '../../img/no-avatar.png';
 import logoutIcon from '../../img/logout-icon.png';
 
 import {

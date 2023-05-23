@@ -64,8 +64,8 @@ export const LearnMoreBtn = styled.button`
 `;
 
 export const DeleteBtn = styled.button`
-  border: 2px solid rgba(245, 146, 86, 1);
-  color: rgba(245, 146, 86, 1);
+  border: 2px solid rgba(255, 154, 154, 1);
+  color: ${p => p.theme.colors.primary};
   background: ${props => props.theme.colors.white};
   border-radius: 40px;
   font-weight: 500;
@@ -93,8 +93,11 @@ export const DeleteBtn = styled.button`
   }
 
   &:hover {
-    background: rgba(255, 97, 1, 1);
+    background: ${p => p.theme.colors.primary};
     color: ${props => props.theme.colors.white};
+  }
+  &:hover > svg {
+    fill: ${props => props.theme.colors.white};
   }
 `;
 
@@ -175,37 +178,44 @@ export const AddToFavoriteBtn = styled.button`
   color: white;
   &.active,
   :hover {
-    background: rgba(245, 146, 86, 1);
+    background: ${p => p.theme.colors.primary};
   }
   &:hover > svg {
-    background: rgba(245, 146, 86, 1);
+    background: ${p => p.theme.colors.primary};
     fill: ${props => props.theme.colors.white};
   }
 `;
 export const FavoriteIcon = styled(AiFillHeart)`
   width: 28px;
   height: 28px;
-  fill: #ff7301;
+  fill: ${p => p.theme.colors.primary};
 `;
 
 export const AddIcon = styled(AiOutlineHeart)`
   width: 28px;
   height: 28px;
-  color: rgba(245, 146, 86, 1);
+  color: ${p => p.theme.colors.primary};
   :hover {
-    background: rgba(245, 146, 86, 1);
+    background: ${p => p.theme.colors.primary};
   }
 `;
-
-export const Image = styled.img`
+export const ImageWrapper = styled.div`
+  position: relative;
   height: 288px;
-
+  width: 100%;
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    width: 336px;
+    height: 336px;
   }
+`;
+export const Image = styled.img`
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 0px 40px 40px;
+  object-fit: cover;
 `;
 
 export const DelIcon = styled(RiDeleteBin5Fill)`
-  color: rgba(245, 146, 86, 1);
+  color: ${p => p.theme.colors.primary};
   width: 24px;
 `;

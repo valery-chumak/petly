@@ -5,6 +5,8 @@ export const theme = {
     white: 'rgba(255, 255, 255, 1)',
     text: 'rgba(17, 17, 17, 1)',
     activeSearchInput: 'rgba(245, 146, 86, 0.5)',
+    primary: 'rgba(255, 154, 154, 1)',
+    secondary: 'rgb(38, 92, 181)',
     home: {
       text: 'rgba(0, 0, 0, 1)',
       primTitle: 'rgba(24, 28, 39, 1)',
@@ -30,10 +32,11 @@ export const theme = {
     // Login + Registration
     login: {
       bgInput: 'rgba(253, 247, 242, 1)',
-      borderInput: 'rgba(245, 146, 86, 0.5)',
+      borderInput: 'rgba(255,154,154,1)',
       placeholderInput: 'rgba(17, 17, 17, 0.6)',
-      primButton: 'background: rgba(255, 186, 186, 1)',
-      secButton: 'rgba(245, 146, 86, 1)',
+      primButton: 'background: rgba(255,154,154,1)',
+      secButton: 'rgba(255,154,154,1)',
+      buttonHover: 'rgb(236 110 110)',
       primButtonText: 'rgba(17, 17, 17, 1)',
       secButtonText: 'rgba(255, 255, 255, 1)',
       firstFormText: 'rgba(17, 17, 17, 0.6)',

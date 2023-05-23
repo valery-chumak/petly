@@ -100,7 +100,6 @@ export const EditImageBtn = styled.button`
 export const EditImageIcon = styled(EditIcon)`
   width: 20px;
   height: 20px;
-
   margin-right: 4px;
 `;
 

@@ -31,7 +31,7 @@ export const FriendName = styled.a`
   text-align: center;
 
   text-decoration-line: underline;
-  color: #f59256;
+  color: #265cb5;
   @media screen and (min-width: 768px) and (max-width: 1299.5px) {
     font-size: ${p => p.theme.fontSizes.c};
     line-height: ${p => p.theme.lineHeights.d};
@@ -41,7 +41,7 @@ export const FriendName = styled.a`
     line-height: ${p => p.theme.lineHeights.c};
   }
   &:hover {
-    color: rgba(255, 97, 1, 1);
+    color: ${p => p.theme.colors.primary};
   }
 `;
 
@@ -103,14 +103,14 @@ export const AdressLink = styled.a`
   color: ${p => p.theme.colors.home.text};
   &:hover {
     font-weight: ${p => p.theme.fontWeights.Bold};
-    color: #f59256;
+    color: ${p => p.theme.colors.primary};
   }
 `;
 
 export const FriendContentItemTime = styled.div`
   display: inline-block;
   &:hover {
-    color: #f59256;
+    color: ${p => p.theme.colors.primary};
     > div {
       display: flex;
     }
@@ -126,7 +126,7 @@ export const FriendContentItemWorkTime = styled.div`
   width: 120px;
   height: 160px;
   background-color: ${p => p.theme.colors.white};
-  border: 1px solid #f59256;
+  border: 1px solid #265cb5;
   border-radius: ${p => p.theme.radii.sm};
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.25);
   padding: 12px;

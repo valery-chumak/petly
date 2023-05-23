@@ -5,6 +5,7 @@ export const StyledImg = styled.img`
   width: 100%;
   height: 100%;
   border-radius: 0px 0px 40px 40px;
+  object-fit: cover;
   margin-top: 60px;
    @media (min-width: 768px) {
     margin-top: 0;
@@ -74,7 +75,7 @@ line-height: 22px;
 export const CommentsText = styled.p`
   margin-top: 28px;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 19px;
   width: 100%;
 `;
@@ -89,13 +90,13 @@ export const NoticeModalBtn = styled.button`
   color: #111111;
   background-color: #ffffff;
   border-radius: 40px;
-  border: 2px solid #f59256;
+  border: 2px solid ${p => p.theme.colors.primary};
   cursor: pointer;
   transition: all 200ms linear;
-  color: #f59256;
+  color: ${p => p.theme.colors.primary};
   &:hover,
   :focus {
-    background-color: #f59256;
+    background-color: ${p => p.theme.colors.primary};
     color: #ffffff;
   }
   &:nth-child(2) span {
@@ -110,7 +111,7 @@ export const NoticeModalBtn = styled.button`
 
   &:nth-child(3) {
     margin-top: 12px;
-    color: #f59256;
+    color: ${p => p.theme.colors.primary};
     &:hover,
     :focus {
       background-color: #fdf7f2;
@@ -124,7 +125,7 @@ export const NoticeModalBtn = styled.button`
       margin-right: 12px;
       margin-top: 0px;
     }
-  } ;
+  }
 `;
 
 export const BtnWrapper = styled.div`
@@ -160,9 +161,9 @@ export const StyledTelLink = styled.a`
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  background-color: #f59256;
+  background-color: ${p => p.theme.colors.primary};
   border-radius: 40px;
-  border: 2px solid #f59256;
+  border: 2px solid ${p => p.theme.colors.primary};
   cursor: pointer;
   transition: all 200ms linear;
   text-decoration: none;
@@ -190,7 +191,7 @@ export const RightContent = styled.div`
 
 export const StyledLink = styled.a`
   font-weight: 700;
-  color: #f59256;
+  color: ${p => p.theme.colors.primary};
 `;
 
 export const customStyles = {

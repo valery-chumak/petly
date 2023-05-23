@@ -15,7 +15,7 @@ export const StyledCloseBtn = styled.button`
   cursor: pointer;
   transition: background-color 200ms linear, transform 200ms linear;
   &:hover, :focus {
-      background-color: #f59256;
+      background-color: ${p => p.theme.colors.primary};
   }
   &:hover, :focus img {
       transform: scale(0.9)

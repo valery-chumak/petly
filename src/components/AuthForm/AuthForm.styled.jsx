@@ -107,7 +107,7 @@ export const ButtonForm = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #eb7f3c;
+    background-color: ${p => p.theme.colors.login.buttonHover};
   }
 
   @media (min-width: 768px) {
