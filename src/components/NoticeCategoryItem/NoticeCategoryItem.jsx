@@ -69,8 +69,9 @@ function NoticeCategoryItem(notices) {
       age--;
 
       const ageWords = numWords(age);
-
       return ageWords;
+    } else if (age <= 0 && m > 0) {
+      return 'less than one';
     }
   }
 
@@ -105,7 +106,7 @@ function NoticeCategoryItem(notices) {
     <>
       <Item key={_id}>
         <ImageWrapper>
-          <Image src={url ?? noImage} alt="pet" minwidth={288} height={288} />
+          <Image src={url ?? noImage} alt="pet" />
         </ImageWrapper>
 
         <CategoryTitle>{changeCategory()}</CategoryTitle>

@@ -83,6 +83,9 @@ export const HomeWrapp = styled.div`
 `;
 
 export const ImagesWrapper = styled.div`
+  position: absolute;
+  bottom: 15%;
+  left: center;
   @media screen and (min-width: 768px) {
     position: absolute;
     bottom: 0;
