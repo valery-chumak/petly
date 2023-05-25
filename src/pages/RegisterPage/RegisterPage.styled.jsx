@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import BgDesk from '../../img/auth/Bg-auth-desk.png';
-import BgDesk2x from '../../img/auth/Bg-auth-desk@2x.png';
-import BgTab from '../../img/auth/Bg-auth-tab.png';
-import BgTab2x from '../../img/auth/Bg-auth-tab@2x.png';
-import BgMob from '../../img/auth/Bg-auth-mob.png';
-import BgMob2x from '../../img/auth/Bg-auth-mob@2x.png';
+import BgDesk from '../../img/auth/shapes.png';
+import BgDesk2x from '../../img/auth/shapes.png';
+import BgTab from '../../img/auth/shapes.png';
+import BgTab2x from '../../img/auth/shapes.png';
+import BgMob from '../../img/auth/shapes.png';
+import BgMob2x from '../../img/auth/shapes.png';
 
 export const Section = styled.section`
   padding-top: 40px;

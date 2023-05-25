@@ -39,6 +39,7 @@ export const HomeTitle = styled.h1`
   font-weight: ${props => props.theme.fontWeights.bold};
   font-size: ${props => props.theme.fontSizes.h};
   line-height: 1.38;
+  margin-top: 58px;
   margin-bottom: 58px;
   width: 280px;
   @media screen and (min-width: 768px) {
@@ -59,8 +60,8 @@ export const HomeTitle = styled.h1`
   }
 `;
 export const Image = styled.img`
-  min-width: 320px;
-  min-height: 337px;
+  min-width: 280px;
+  min-height: 237px;
 
   @media screen and (min-width: 768px) {
     max-width: 645px;
@@ -82,9 +83,6 @@ export const HomeWrapp = styled.div`
 `;
 
 export const ImagesWrapper = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 5%;
   @media screen and (min-width: 768px) {
     position: absolute;
     bottom: 0;

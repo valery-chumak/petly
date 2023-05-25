@@ -101,6 +101,11 @@ export const LinkToRegister = styled(Link)`
   font-size: 12px;
   line-height: 16px;
   text-decoration: underline;
+  :active,
+  :hover,
+  :focus {
+    color: ${p => p.theme.colors.primary};
+  }
 `;
 export const DontLog = styled.h4`
   color: rgba(17, 17, 17, 0.6);
@@ -115,7 +120,7 @@ export const Label = styled.label`
 `;
 
 export const Button = styled.button`
-  background: #f59256;
+  background: ${p => p.theme.colors.login.secButton};
   border-radius: 40px;
 
   margin: 40px auto;
@@ -132,8 +137,10 @@ export const Button = styled.button`
   color: #ffffff;
   padding: 14px 11px;
   width: 280px;
-  :active {
-    background-color: rgba(252, 173, 70, 1);
+  :active,
+  :hover,
+  :focus {
+    background-color: ${p => p.theme.colors.login.buttonHover};
     transform: translate(0, 0.25em);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }

@@ -108,6 +108,7 @@ export const ButtonForm = styled.button`
   &:hover,
   &:focus {
     background-color: ${p => p.theme.colors.login.buttonHover};
+    transform: translate(0, 0.25em);
   }
 
   @media (min-width: 768px) {

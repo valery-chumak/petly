@@ -6,7 +6,6 @@ import {
   MainNoticeBtn,
   BtnsWrapper,
   RadioBtn,
-  StyledText,
   MainBtnsWrapper,
   RadioBtnText,
   RadioBtnWrapper,
@@ -75,10 +74,6 @@ const FirstStep = ({
     >
       {({ values }) => (
         <Form>
-          <StyledText>
-            Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet,
-            consectetur{' '}
-          </StyledText>
           <BtnsWrapper>
             <RadioBtnWrapper htmlFor="lostfound">
               <RadioBtn
