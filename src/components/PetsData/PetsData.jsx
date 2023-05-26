@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ThreeDots } from 'react-loader-spinner';
+import Loader from 'components/Loader/Loader';
 
 import { selectError, selectIsLoading } from '../../redux/auth/authSelectors';
 
@@ -50,12 +50,7 @@ function PetsData() {
       )}
       {loading && (
         <LoaderUser>
-          <ThreeDots
-            height="100"
-            width="100"
-            radius="9"
-            color={'rgb(245, 146, 86)'}
-          />
+          <Loader />
         </LoaderUser>
       )}
       {error && <p>Oops!</p>}

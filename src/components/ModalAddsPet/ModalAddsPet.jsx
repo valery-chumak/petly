@@ -17,11 +17,12 @@ import {
   IconClose,
 } from './ModalAddsPet.styled';
 
-const modalRoot = document.getElementById('modal-root');
+const modalRoot = document.getElementById('root');
 
 export default function ModalAddsPet({ setShowModal }) {
   const dispatch = useDispatch();
   const token = useSelector(selectAccessToken);
+  const root = document.getElementById('root');
 
   const [formData, setFormData] = useState({
     name: '',

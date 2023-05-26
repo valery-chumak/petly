@@ -72,6 +72,6 @@ export const IconClose = styled.button`
   }
   &:hover,
   &:focus {
-    background-color: ${p => p.theme.colors.profile.logOutIcon};
+    background-color: ${p => p.theme.colors.primary};
   }
 `;

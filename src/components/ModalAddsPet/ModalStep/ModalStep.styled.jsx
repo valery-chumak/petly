@@ -21,7 +21,7 @@ export const Input = styled(Field)`
   line-height: 1.36;
   letter-spacing: 0.04em;
   background: #fdf7f2;
-  border: 1px solid rgba(245, 146, 86, 0.5);
+  border: 1px solid rgba(255, 154, 154, 1);
   border-radius: 40px;
   outline: none;
   padding: 11px 14px 12px;
@@ -56,7 +56,7 @@ export const ButtonNext = styled.button`
   font-size: 20px;
   line-height: 1.38;
   letter-spacing: ${p => p.theme.letterSpacing.b};
-  background-color: #f59256;
+  background-color: ${p => p.theme.colors.primary};
   color: #ffffff;
   border: 2px solid ${p => p.theme.colors.profile.pencilActive};
   border-radius: 40px;
@@ -71,7 +71,7 @@ export const ButtonNext = styled.button`
 
   &:hover,
   &:focus {
-    background-color: #eb7f3c;
+    background-color: rgb(236 110 110);
   }
 `;
 export const ButtonDone = styled(ButtonNext)``;
@@ -98,6 +98,7 @@ export const LabelPhoto = styled.div`
   }
 `;
 export const ImgPhoto = styled.img`
+  object-fit: cover;
   width: 208px;
   height: 208px;
   margin: auto;
@@ -122,7 +123,7 @@ export const Textarea = styled(Field)`
   max-width: 100%;
   height: 100px;
   background: #fdf7f2;
-  border: 1px solid rgba(245, 146, 86, 0.5);
+  border: 1px solid rgb(236 110 110);
   border-radius: 20px;
   padding: 12px 14px;
   outline: none;
@@ -208,7 +209,7 @@ export const ButtonCancel = styled.button`
   letter-spacing: ${p => p.theme.letterSpacing.b};
   color: ${p => p.theme.colors.profile.text};
   background-color: #ffffff;
-  border: 2px solid ${p => p.theme.colors.profile.pencilActive};
+  border: 2px solid ${p => p.theme.colors.primary};
   border-radius: 40px;
   cursor: pointer;
   padding-top: 9px;

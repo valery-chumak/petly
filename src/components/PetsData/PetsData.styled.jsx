@@ -75,7 +75,7 @@ export const AddButton = styled.button`
   :hover,
   :focus {
     transform: scale(1.05);
-    background-color: #eb7f3c;
+    background-color: rgb(236 110 110);
   }
 `;
 
