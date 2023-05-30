@@ -28,8 +28,15 @@ function OurFriensItem({
   const days = ['MN', 'TU', 'WE', 'TH', 'FR', 'SA', 'SU'];
 
   const d = new Date();
+
   const n = d.getDay();
-  const today = days[n - 1];
+
+  let today;
+  if (n !== 0) {
+    today = days[n - 1];
+  } else {
+    today = days[6];
+  }
 
   const TelTo = () => {
     const telNumber = phone.replace(/[^0-9+]/g, '');
@@ -75,7 +82,7 @@ function OurFriensItem({
                 <FriendContentItemTime>
                   Time:
                   <br />
-                  {timeList[n - 1]}
+                  {today === 'SU' ? timeList[6] : timeList[n - 1]}
                   <FriendContentItemWorkTime>
                     <ul>{listDropmenu}</ul>
                   </FriendContentItemWorkTime>

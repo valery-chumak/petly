@@ -95,7 +95,7 @@ export const FriendLogoImg = styled.img`
   object-fit: contain;
   @media screen and (min-width: 1300px) {
     margin: auto;
-    width: auto;
+    width: inherit;
   }
 `;
 

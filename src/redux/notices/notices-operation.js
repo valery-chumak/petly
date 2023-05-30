@@ -4,18 +4,18 @@ import { addNotice } from 'services/API/API';
 import { toast } from 'react-toastify';
 import { fetchRemoveNotice } from 'services/API/API';
 
-axios.defaults.baseURL = 'https://petly-backend.onrender.com/api/';
+axios.defaults.baseURL = 'http://localhost:4000/api/';
 
 export const getNotices = createAsyncThunk(
   'notices/categoryName',
   async ({ categoryName, token }, thunkApi) => {
-  const config = {
-    headers: {
-      Accept: 'application/json',
-      Authorization: `Bearer ${token}`,
-      'Content-Type': 'multipart/form-data',
-    },
-  };
+    const config = {
+      headers: {
+        Accept: 'application/json',
+        Authorization: `Bearer ${token}`,
+        'Content-Type': 'multipart/form-data',
+      },
+    };
 
     function changeFetch() {
       const fetchFree = '/category/ingoodhands';
@@ -50,7 +50,7 @@ export const getNotices = createAsyncThunk(
       } else {
         return categoryName;
       }
-    };
+    }
 
     function addToken(categoryName) {
       const routFavorite = 'favorite';
@@ -64,7 +64,9 @@ export const getNotices = createAsyncThunk(
 
     try {
       const { data } = await axios.get(
-        `/notices${changeFetch(categoryName)}`,addToken(categoryName));
+        `/notices${changeFetch(categoryName)}`,
+        addToken(categoryName)
+      );
 
       return data;
     } catch (error) {
@@ -84,7 +86,6 @@ export const FavoritesNotices = createAsyncThunk(
     }
   }
 );
-
 
 export const createNotice = createAsyncThunk(
   'notices/createNotice',

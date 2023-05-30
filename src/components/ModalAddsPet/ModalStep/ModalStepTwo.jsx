@@ -58,6 +58,7 @@ export default function ModalStepTwo({ next, data, setFormData, prev }) {
     if (fileImg) {
       setFileInput(fileImg);
       setFieldValue('avatar', fileImg);
+      console.log(fileImg);
       setFormData(values => ({ ...values, avatar: fileImg }));
     }
   };

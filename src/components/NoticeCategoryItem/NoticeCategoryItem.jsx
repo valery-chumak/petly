@@ -1,9 +1,7 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
-import numWords from 'num-words';
 import noImage from '../../img/noImage.png';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { selectIsLoggedIn } from 'redux/auth/authSelectors';
 import {
   addNoticeToFavorite,
@@ -63,16 +61,41 @@ function NoticeCategoryItem(notices) {
   function getAge() {
     const today = new Date();
     const birthDate = new Date(birthdate);
-    let age = today.getFullYear() - birthDate.getFullYear();
-    const m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-      age--;
 
-      const ageWords = numWords(age);
-      return ageWords;
-    } else if (age <= 0 && m > 0) {
-      return 'less than one';
+    // Calculate the difference in years and months
+    let ageInYears = today.getFullYear() - birthDate.getFullYear();
+    let ageInMonths = today.getMonth() - birthDate.getMonth();
+
+    // Check if the birthdate hasn't occurred yet this year
+    const hasNotHadBirthdayYet =
+      today.getMonth() < birthDate.getMonth() ||
+      (today.getMonth() === birthDate.getMonth() &&
+        today.getDate() < birthDate.getDate());
+
+    // Adjust the age if the birthdate hasn't occurred yet this year
+    if (hasNotHadBirthdayYet) {
+      ageInYears--;
+      ageInMonths = 12 - birthDate.getMonth() + today.getMonth();
     }
+
+    // If the age is less than 1 year
+    if (ageInYears < 1) {
+      if (ageInMonths === 0) {
+        return 'less than one month old';
+      } else if (ageInMonths === 1) {
+        return 'one month old';
+      } else {
+        return `${ageInMonths} months old`;
+      }
+    }
+
+    // If the age is 1 year
+    if (ageInYears === 1) {
+      return 'one year old';
+    }
+
+    // For ages greater than 1 year
+    return `${ageInYears} years old`;
   }
 
   function changeCategory() {
@@ -125,7 +148,7 @@ function NoticeCategoryItem(notices) {
           </Text>
           <Text>
             <Span>Age:</Span>
-            {getAge()} {getAge() === 'one' ? 'year' : 'years'}
+            {getAge()}
           </Text>
           {category === 'sell' && (
             <Text>
