@@ -10,10 +10,6 @@ import NewsSearchForm from 'components/News/NewsSearchForm';
 import { getAllNews, getLoading, getError } from 'redux/news/news-selectors';
 import { getNews } from 'redux/news/news-operations';
 
-// const spinnerStyles = {
-//   marginTop: '20px',
-// };
-
 function NewsPage() {
   const [q, setQ] = useState('');
   const dispatch = useDispatch();
