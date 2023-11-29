@@ -4,7 +4,7 @@ import { addNotice } from 'services/API/API';
 import { toast } from 'react-toastify';
 import { fetchRemoveNotice } from 'services/API/API';
 
-axios.defaults.baseURL = 'https://petly-il1v.onrender.com/api/';
+axios.defaults.baseURL = 'https://petly-backend.onrender.com/api';
 
 export const getNotices = createAsyncThunk(
   'notices/categoryName',
